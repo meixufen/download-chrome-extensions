@@ -8,14 +8,14 @@ http://mp.weixin.qq.com/s/HHPxGTk55oEw0Pj4TRg6FA
 
 # 安装和运行
 
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 
-python3 geknower.py
+python geknower.py
 
 # 帮助文档
 
 ```
-$ python3 geknower.py --help
+$ python geknower.py --help
 [*] main start
 Usage: geknower.py [OPTIONS] COMMAND [ARGS]...
 
@@ -29,7 +29,7 @@ Commands:
   spec-weblistAgain  Re get weblist
 
 
-python3 geknower.py etxDownload --help
+python geknower.py etxDownload --help
 [*] main start
 Usage: geknower.py etxDownload [OPTIONS]
 
@@ -49,7 +49,7 @@ Options:
   --help                Show this message and exit.
 
 
-$ python3 geknower.py etxInfo --help                                                                 
+$ python geknower.py etxInfo --help                                                                 
 [*] main start
 Usage: geknower.py etxInfo [OPTIONS]
 
@@ -108,22 +108,14 @@ conf['HTTP_HEADERS'] = {
 
 ## 关于已生成的数据文件
 
-这里提供两个数据文件：
-
-1. 扩展探测中用到数据文件：[用户量1000+且带有解析后处理后的web_accessible_resources的插件信息](./data/etx_weblist_info_1k.txt)
-2. 包含所有扩展信息的数据文件: [所有拓展信息](./data/etx_info_all.txt)
+包含所有扩展信息的数据文件: [所有拓展信息](./data/etx_info_all.txt)
 
 ## Example
 
 使用20线程下载所有data/etx_info_all.txt内用户量大于10000的插件crx文件到tmp目录
 
-`python3 geknower.py etxDownload --outfile out.txt -f data/etx_info_all.txt -t 20 -u 10000 -p /tmp `
+`python geknower.py etxDownload --outfile out.txt -f data/etx_info_all.txt -t 20 -u 10000 -p /tmp `
 
 爬取用户量大于1000000插件信息数据
 
-`python3 geknower.py etxInfo -O out.txt -u 1000000`
-
-## Thx
-
-Evi1m0 Phithon
-
+`python geknower.py etxInfo -O out.txt -u 1000000`
